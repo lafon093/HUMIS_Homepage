@@ -4,9 +4,14 @@ body {
 
     div.container {
         width: 780px;
-        border: 2px solid red;
         margin: 0 auto;
         background-color: white;
+        
+        header{
+            img {
+                display: block;
+            }
+        }
 
         section.middle {
             min-height: 500px;
@@ -106,7 +111,14 @@ body {
 
                     p {
                         font-size: 12px;
+                        
+                        span{
+                            font-weight: bold;
+                            font-size:105%;
+                        }
                     }
+                    
+                    
 
                     div.links {
                         text-align: right;
