@@ -1,3 +1,7 @@
+:root{
+    --EDGreen:#616643;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #F2F2F2;
@@ -7,8 +11,8 @@ body {
         max-width: 780px;
         margin: 0 auto;
         background-color: white;
-        
-        header{
+
+        header {
             img {
                 display: block;
                 width: 100%;
@@ -47,11 +51,52 @@ body {
                     }
                 }
 
+                &.drop-down-menu {
+                    margin-top: 5px;
+
+                    select {
+                        width: 100%;
+                    }
+                }
+
                 &.bottom {
                     text-transform: lowercase;
                 }
             }
+
+            div.green-box {
+                min-height: 400px;
+                background-color: #D2D2BB;
+                padding: 10px;
+                margin: 10px 0 100px;
+                border-radius: 10px;
+
+                aside {
+                    &.left-side {
+                        display: none;
+                    }
+                }
+
+                main {
+                    background-color: white;
+                    padding: 10px;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    p {
+                        font-size: 12px;
+
+                        span{
+                            font-weight: bold;
+                            font-size:105%;
+                        }
+                    }
+                }
+            }
         }
+
         footer {
             background-color: #77793E;
             text-align: center;
@@ -62,15 +107,51 @@ body {
 
         /* Tablet & Up overrides */
         @media screen and (width >= 700px) {
-            border: 10px solid black;
-            
+
             section.middle {
                 > nav {
                     text-align: right;
+
+                    &.drop-down-menu {
+                        display: none;
+                    }
+                }
+
+                div.green-box {
+                    padding: 20px 30px;
+
+                    aside {
+                        &.left-side {
+                            display: block;
+                            float: left;
+                            width: 30%;
+                        }
+                        
+                        nav {
+                            padding: 0 20px;
+                            a {
+                                display: block;
+                                color: #303137;
+                                font-size: 10px;
+                                padding: 10px 0 10px 15px;
+                                text-transform: uppercase;
+                                text-decoration: none;
+                                border-bottom: 2px solid var(--EDGreen);
+
+                                    &:hover {
+                                        background-color: var(--EDGreen);
+                                        color: white;
+                                    }
+                            }
+                        }
+                    }
+
+                    main {
+                        float: right;
+                        width: 60%;
+                    }
                 }
             }
         }
     }
 }
-
-
