@@ -39,12 +39,62 @@ body {
                     img {
                         vertical-align: middle;
                     }
+
+                    &:last-of-type {
+                        border-right: none;
+                    }
+                }
+                
+                &.drop-down-menu{
+                    margin-top: 5px;
+                    
+                    select{
+                        width: 100%;
+                    }
+                }
+                
+                &.bottom {
+                    text-transform: lowercase;
                 }
             }
 
             main {
                 h1 {
                     color: red;
+                    text-transform: uppercase;
+                }
+                
+                h3{
+                    color:red;
+                    font-weight: bold;
+                }
+                
+                img{
+                    width: 100%;
+                }
+                
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+
+        footer {
+            background-color: #77793E;
+            text-align: center;
+            color: white;
+            font-size: 10px;
+            padding: 10px 0;
+        }
+
+        @media screen and (width >= 700px){
+            section.middle {
+                >nav{
+                    text-align: right;
+
+                    &.drop-down-menu{
+                        display: none;
+                    }
                 }
             }
         }
