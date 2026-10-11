@@ -1,3 +1,7 @@
+:root{
+    --EDGreen:#616643;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #F2F2F2;
@@ -19,7 +23,7 @@ body {
             min-height: 500px;
             padding: 5px 10px;
 
-            >nav {
+            > nav {
                 text-align: center;
                 font-size: 10px;
                 text-transform: uppercase;
@@ -44,36 +48,48 @@ body {
                         border-right: none;
                     }
                 }
-                
-                &.drop-down-menu{
+
+                &.drop-down-menu {
                     margin-top: 5px;
-                    
-                    select{
+
+                    select {
                         width: 100%;
                     }
                 }
-                
+
                 &.bottom {
                     text-transform: lowercase;
                 }
             }
+            
+            div.grey-rectangle {
+                display:none;
+                
+                    aside {
+                        &.sidebar {
+                            display: none;
+                        }
+                    }
+            }
+
 
             main {
                 h1 {
                     color: red;
                     text-transform: uppercase;
                 }
-                
-                h3{
-                    color:red;
+
+                h3 {
+                    color: red;
                     font-weight: bold;
+                    text-transform: uppercase;
                 }
-                
-                img{
+
+                img {
                     width: 100%;
                 }
-                
-                p{
+
+                p {
                     font-size: 12px;
                 }
             }
@@ -87,16 +103,55 @@ body {
             padding: 10px 0;
         }
 
-        @media screen and (width >= 700px){
+        @media screen and (width >= 700px) {
             section.middle {
-                >nav{
+                > nav {
                     text-align: right;
 
-                    &.drop-down-menu{
+                    &.drop-down-menu {
                         display: none;
                     }
                 }
+            
+                div.grey-rectangle {
+                    display: contents;
+
+                    aside {
+                        &.sidebar {
+                            display: block;
+                            float: left;
+                            width: 30%;
+
+                            nav {
+                                padding: 0 20px;
+
+                                a {
+                                    display: block;
+                                    color: #303137;
+                                    font-size: 10px;
+                                    padding: 10px 0 10px 15px;
+                                    text-transform: uppercase;
+                                    text-decoration: none;
+                                    border-bottom: 2px solid var(--EDGreen);
+
+                                    &:hover {
+                                        background-color: var(--EDGreen);
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                main{
+                    float:right;
+                    width:60%
             }
         }
     }
 }
+
+
+}
+
