@@ -1,5 +1,7 @@
-:root{
-    --EDGreen:#616643;
+:root {
+    --EDGreen: #616643;
+    --light-green: #C3C4A3;
+    --light-grey: #F5F6F6;
 }
 
 body {
@@ -7,9 +9,10 @@ body {
     background-color: #F2F2F2;
 
     div.container {
-        min-width: 390px;
-        max-width: 780px;
-        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        min-height: 70vh;
+        justify-content: space-between;
         background-color: white;
 
         header {
@@ -20,77 +23,76 @@ body {
         }
 
         section.middle {
-            min-height: 500px;
-            padding: 5px 10px;
+            height: 100%;
 
-            > nav {
-                text-align: center;
-                font-size: 10px;
-                text-transform: uppercase;
+            div.left-side {
+                display: none;
+            }
 
-                a {
+            section.inner {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
-                    color: black;
-                    border-right: 1px solid black;
-                    padding-right: 5px;
-                    margin-right: 5px;
-                    text-decoration: none;
+                > nav {
+                    display:flex;
+                    justify-content:center;
+                    font-size: 10px;
+                    text-transform: uppercase;
 
-                    &:hover {
-                        text-decoration: underline;
+                    a {
+                        color: black;
+                        border-right: 1px solid black;
+                        padding-right: 5px;
+                        margin-right: 5px;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        img {
+                            vertical-align: middle;
+                        }
+
+                        &:last-of-type {
+                            border-right: none;
+                        }
+                    }
+
+                    &.drop-down-menu {
+                        margin-top: 5px;
+
+                        select {
+                            width: 100%;
+                        }
+                    }
+
+                    &.bottom {
+                        text-transform: lowercase;
+                    }
+                }
+
+                main {
+
+                    h1 {
+                        color: red;
+                        text-transform: uppercase;
+                    }
+
+                    h3 {
+                        color: red;
+                        font-weight: bold;
+                        text-transform: uppercase;
                     }
 
                     img {
-                        vertical-align: middle;
-                    }
-
-                    &:last-of-type {
-                        border-right: none;
-                    }
-                }
-
-                &.drop-down-menu {
-                    margin-top: 5px;
-
-                    select {
                         width: 100%;
                     }
-                }
 
-                &.bottom {
-                    text-transform: lowercase;
-                }
-            }
-            
-            div.grey-rectangle {
-                display:none;
-                
-                    aside {
-                        &.sidebar {
-                            display: none;
-                        }
+                    p {
+                        font-size: 12px;
                     }
-            }
-
-
-            main {
-                h1 {
-                    color: red;
-                    text-transform: uppercase;
-                }
-
-                h3 {
-                    color: red;
-                    font-weight: bold;
-                    text-transform: uppercase;
-                }
-
-                img {
-                    width: 100%;
-                }
-
-                p {
-                    font-size: 12px;
                 }
             }
         }
@@ -105,53 +107,51 @@ body {
 
         @media screen and (width >= 700px) {
             section.middle {
-                > nav {
-                    text-align: right;
+                display: flex;
+
+                div.left-side {
+                    display: flex;
+                    flex-direction: column;
+                    width: 30%;
+                    border-right: 2px solid var(--light-green);
+                    background-color: var(--light-grey);
+
+                    nav.left-nav {
+                        margin: 20px 10px 0;
+
+                        a {
+                            display: block;
+                            color: #303137;
+                            font-size: 10px;
+                            padding: 10px 0 10px 15px;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            border-bottom: 2px solid var(--EDGreen);
+
+                            &:hover {
+                                background-color: var(--EDGreen);
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            section.inner {
+                width: 70%;
+
+                nav {
+                    justify-content:flex-end;
 
                     &.drop-down-menu {
                         display: none;
                     }
                 }
-            
-                div.grey-rectangle {
-                    display: contents;
-
-                    aside {
-                        &.sidebar {
-                            display: block;
-                            float: left;
-                            width: 30%;
-
-                            nav {
-                                padding: 0 20px;
-
-                                a {
-                                    display: block;
-                                    color: #303137;
-                                    font-size: 10px;
-                                    padding: 10px 0 10px 15px;
-                                    text-transform: uppercase;
-                                    text-decoration: none;
-                                    border-bottom: 2px solid var(--EDGreen);
-
-                                    &:hover {
-                                        background-color: var(--EDGreen);
-                                        color: white;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
                 
                 main{
-                    float:right;
-                    width:60%
+                    padding: 20px;
+                }
             }
         }
     }
 }
-
-
-}
-
