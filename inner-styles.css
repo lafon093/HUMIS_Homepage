@@ -6,6 +6,8 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    display:flex;
+    justify-content: center;
     background-color: #F2F2F2;
 
     div.container {
@@ -14,6 +16,8 @@ body {
         min-height: 70vh;
         justify-content: space-between;
         background-color: white;
+        max-width: 780px;
+        
 
         header {
             img {
@@ -33,12 +37,26 @@ body {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                
+                nav.drop-down-menu{
+                    gap: 15px;
+                    background-color: var(--light-grey);
+                    padding: 20px 10px;
+                   
+                    label{
+                        select{
+                            width: 100%;
+                        }
+                    }
+                }
 
                 > nav {
                     display:flex;
                     justify-content:center;
                     font-size: 10px;
                     text-transform: uppercase;
+                    margin-top: 5px;
+                    align-items: center;
 
                     a {
                         color: black;
@@ -58,18 +76,15 @@ body {
                         &:last-of-type {
                             border-right: none;
                         }
-                    }
-
-                    &.drop-down-menu {
-                        margin-top: 5px;
-
-                        select {
-                            width: 100%;
+                        
+                        &.active{
+                            text-decoration: underline;
                         }
                     }
 
                     &.bottom {
                         text-transform: lowercase;
+                        margin-bottom: 5px;
                     }
                 }
 
@@ -86,7 +101,7 @@ body {
                         text-transform: uppercase;
                     }
 
-                    img {
+                     img {
                         width: 100%;
                     }
 
@@ -112,12 +127,14 @@ body {
                 div.left-side {
                     display: flex;
                     flex-direction: column;
+                    justify-content: space-between;
                     width: 30%;
                     border-right: 2px solid var(--light-green);
                     background-color: var(--light-grey);
+                    padding-bottom: 20px;
 
                     nav.left-nav {
-                        margin: 20px 10px 0;
+                        margin: 20px 20px 0;
 
                         a {
                             display: block;
@@ -126,30 +143,42 @@ body {
                             padding: 10px 0 10px 15px;
                             text-transform: uppercase;
                             text-decoration: none;
-                            border-bottom: 2px solid var(--EDGreen);
+                            border-bottom: 1px solid var(--EDGreen);
 
                             &:hover {
                                 background-color: var(--EDGreen);
                                 color: white;
                             }
+                            
+                            &.active {
+                                font-weight:strong;
+                                font-weight: bold;
+                            }
                         }
                     }
-                }
-            }
-
-            section.inner {
-                width: 70%;
-
-                nav {
-                    justify-content:flex-end;
-
-                    &.drop-down-menu {
-                        display: none;
+                    
+                    div.login-links{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 10px;
                     }
                 }
-                
-                main{
-                    padding: 20px;
+
+                section.inner {
+                    width: 70%;
+
+                    nav {
+                        justify-content:flex-end;
+
+                        &.drop-down-menu {
+                            display: none;
+                        }
+                    }
+
+                    main{
+                        padding: 20px;
+                    }
                 }
             }
         }
