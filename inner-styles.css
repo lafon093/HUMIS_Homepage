@@ -86,6 +86,14 @@ body {
                         text-transform: lowercase;
                         margin-bottom: 5px;
                     }
+                    
+                    &.middle{
+                        a{
+                            color: red;
+                            border-right: 1px solid red;
+                        }
+                    }
+                    
                 }
 
                 main {
@@ -99,6 +107,17 @@ body {
                         color: red;
                         font-weight: bold;
                         text-transform: uppercase;
+                    }
+                    
+                    h4{
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+                    
+                    ul{
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
                     }
 
                      img {
@@ -174,6 +193,12 @@ body {
                         &.drop-down-menu {
                             display: none;
                         }
+                        
+                        &.middle{
+                            justify-content: left;
+                            padding: 5px 10px 0 20px;
+                        }
+                        
                     }
 
                     main{
