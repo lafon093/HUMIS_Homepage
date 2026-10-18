@@ -98,9 +98,27 @@ body {
 
                 main {
 
+                    div.sections{
+                        height: 100%;
+
+                        div.main-left {
+                            display: none;
+                        }
+                        
+                        div.main-right{
+                            ul.text li{
+                                font-size: 12px;
+                            }
+                            ul.text li:first-child{
+                                font-style: italic;
+                            }
+                        }
+                    }
+
                     h1 {
                         color: red;
                         text-transform: uppercase;
+                        font-size: 20px;
                     }
 
                     h3 {
@@ -112,6 +130,7 @@ body {
                     h4{
                         font-weight: bold;
                         font-size: 16px;
+                        margin:20px 0 0 0;
                     }
                     
                     ul{
@@ -195,6 +214,7 @@ body {
                         }
                         
                         &.middle{
+                            display: none;
                             justify-content: left;
                             padding: 5px 10px 0 20px;
                         }
@@ -203,6 +223,30 @@ body {
 
                     main{
                         padding: 20px;
+
+                        div.sections{
+                            display:flex;
+
+                            div.main-left{
+                                display: flex;
+                                flex-direction: column;
+                                width:35%;
+                                border-right: 2px dashed grey;
+                                padding-right: 10px;
+
+                                ul li:first-child{
+                                    font-weight: bold;
+                                }
+
+
+                            }
+
+                            div.main-right{
+                                padding-left: 20px;
+                                flex-direction: column;
+                                width:70%;
+                            }
+                        }
                     }
                 }
             }
