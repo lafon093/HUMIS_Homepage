@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    display:flex;
+    display: flex;
     justify-content: center;
     background-color: #F2F2F2;
 
@@ -17,7 +17,7 @@ body {
         justify-content: space-between;
         background-color: white;
         max-width: 780px;
-        
+
 
         header {
             img {
@@ -37,22 +37,22 @@ body {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                
-                nav.drop-down-menu{
+
+                nav.drop-down-menu {
                     gap: 15px;
                     background-color: var(--light-grey);
                     padding: 20px 10px;
-                   
-                    label{
-                        select{
+
+                    label {
+                        select {
                             width: 100%;
                         }
                     }
                 }
 
                 > nav {
-                    display:flex;
-                    justify-content:center;
+                    display: flex;
+                    justify-content: center;
                     font-size: 10px;
                     text-transform: uppercase;
                     margin-top: 5px;
@@ -76,8 +76,8 @@ body {
                         &:last-of-type {
                             border-right: none;
                         }
-                        
-                        &.active{
+
+                        &.active {
                             text-decoration: underline;
                         }
                     }
@@ -86,30 +86,39 @@ body {
                         text-transform: lowercase;
                         margin-bottom: 5px;
                     }
-                    
-                    &.middle{
-                        a{
+
+                    &.middle {
+                        a {
                             color: red;
                             border-right: 1px solid red;
                         }
                     }
-                    
+
                 }
 
                 main {
+                    .active{
+                        font-weight:bold;
+                    }
 
-                    div.sections{
+                    div.sections {
                         height: 100%;
 
                         div.main-left {
                             display: none;
                         }
-                        
-                        div.main-right{
-                            ul.text li{
+
+                        div.main-right {
+
+                            ul.header li{
+                                color:red;
+                            }
+
+                            ul.text li {
                                 font-size: 12px;
                             }
-                            ul.text li:first-child{
+
+                            ul.text li:first-child {
                                 font-style: italic;
                             }
                         }
@@ -126,20 +135,20 @@ body {
                         font-weight: bold;
                         text-transform: uppercase;
                     }
-                    
-                    h4{
+
+                    h4 {
                         font-weight: bold;
                         font-size: 16px;
-                        margin:20px 0 0 0;
+                        margin: 20px 0 0 0;
                     }
-                    
-                    ul{
+
+                    ul {
                         list-style-type: none;
                         margin: 0;
                         padding: 0;
                     }
 
-                     img {
+                    img {
                         width: 100%;
                     }
 
@@ -187,15 +196,14 @@ body {
                                 background-color: var(--EDGreen);
                                 color: white;
                             }
-                            
+
                             &.active {
-                                font-weight:strong;
                                 font-weight: bold;
                             }
                         }
                     }
-                    
-                    div.login-links{
+
+                    div.login-links {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
@@ -207,44 +215,54 @@ body {
                     width: 70%;
 
                     nav {
-                        justify-content:flex-end;
+                        justify-content: flex-end;
 
                         &.drop-down-menu {
                             display: none;
                         }
-                        
-                        &.middle{
+
+                        &.middle {
                             display: none;
                             justify-content: left;
                             padding: 5px 10px 0 20px;
                         }
-                        
+
                     }
 
-                    main{
+                    main {
                         padding: 20px;
+                        min-height: 500px;
 
-                        div.sections{
-                            display:flex;
+                        aside{
+                            .pull{
+                                display:inline-block;
 
-                            div.main-left{
+                                img{
+                                    max-width: 200px;
+                                }
+
+                                &.right{
+                                    float: right;
+                                }
+                            }
+                        }
+
+                        div.sections {
+                            display: flex;
+
+                            div.main-left {
                                 display: flex;
                                 flex-direction: column;
-                                width:35%;
+                                width: 35%;
                                 border-right: 2px dashed grey;
                                 padding-right: 10px;
 
-                                ul li:first-child{
-                                    font-weight: bold;
-                                }
-
-
                             }
 
-                            div.main-right{
+                            div.main-right {
                                 padding-left: 20px;
                                 flex-direction: column;
-                                width:70%;
+                                width: 70%;
                             }
                         }
                     }
