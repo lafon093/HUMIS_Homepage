@@ -91,6 +91,9 @@ body {
                         a {
                             color: red;
                             border-right: 1px solid red;
+                            &:last-of-type {
+                                border-right: none;
+                            }
                         }
                     }
 
@@ -99,6 +102,10 @@ body {
                 main {
                     .active{
                         font-weight:bold;
+                    }
+
+                    .pull{
+                        float:right;
                     }
 
                     div.sections {
@@ -130,10 +137,16 @@ body {
                         font-size: 20px;
                     }
 
-                    h3 {
+                    h2 {
                         color: red;
                         font-weight: bold;
                         text-transform: uppercase;
+                        font-size:18px;
+                    }
+
+                    h3{
+                        color:red;
+                        font-size:15px
                     }
 
                     h4 {
@@ -149,11 +162,19 @@ body {
                     }
 
                     img {
-                        width: 100%;
+                        max-width: 200px;
                     }
 
                     p {
                         font-size: 12px;
+                        
+                        &.more{
+                            color:red;
+                        }
+                        
+                        span{
+                            font-weight: bold;
+                        }
                     }
                 }
             }
@@ -232,18 +253,12 @@ body {
                     main {
                         padding: 20px;
                         min-height: 500px;
-
-                        aside{
-                            .pull{
-                                display:inline-block;
-
-                                img{
-                                    max-width: 200px;
-                                }
-
-                                &.right{
-                                    float: right;
-                                }
+                        
+                        .pull{
+                            display: inline-block;
+                            
+                            &.right{
+                                float: right;
                             }
                         }
 
@@ -256,6 +271,12 @@ body {
                                 width: 35%;
                                 border-right: 2px dashed grey;
                                 padding-right: 10px;
+                                
+                                ul{
+                                    li{
+                                        font-size: 12px;
+                                    }
+                                }
 
                             }
 
